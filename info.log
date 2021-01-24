@@ -1,0 +1,14 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /api/v1/auth/login        --> github.com/drmendoz/backend-gin-gorm/routes.authRoutes.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/administradores   --> github.com/drmendoz/backend-gin-gorm/controllers.GetAdministradores (4 handlers)
+[GIN-debug] POST   /api/v1/administradores   --> github.com/drmendoz/backend-gin-gorm/controllers.CreateAdministrador (4 handlers)
+[GIN-debug] PUT    /api/v1/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateAdministrador (4 handlers)
+[GIN-debug] GET    /api/v1/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.GetAdministradorPorId (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+::1 - [Sun, 24 Jan 2021 04:09:35 -05] "GET /api/v1/administradores/2 HTTP/1.1 200 924.313µs "PostmanRuntime/7.26.8" "
+[GIN] 2021/01/24 - 04:09:35 | 200 |   16.841118ms |             ::1 | GET      "/api/v1/administradores/2"
