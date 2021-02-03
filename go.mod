@@ -9,7 +9,6 @@ require (
 	github.com/golang/protobuf v1.4.3 // indirect
 	github.com/json-iterator/go v1.1.10 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
-	github.com/rs/cors v1.7.0
 	github.com/sirupsen/logrus v1.2.0
 	github.com/spf13/viper v1.7.1
 	github.com/ugorji/go v1.2.3 // indirect

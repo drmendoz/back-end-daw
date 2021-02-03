@@ -9,7 +9,7 @@ type Administrador struct {
 	Rol        string `json:"rol,omitempty"`
 	Contrasena string `json:"contrasena,omitempty" binding:"required"`
 	Imagen     string `json:"imagen,omitempty"`
-	Estado     string `json:"estado,omitempty"`
+	Estado     bool   `json:"estado" gorm:"default:true"`
 }
 
 func (Administrador) TableName() string {

@@ -6,6 +6,7 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
+	"gorm.io/gorm"
 
 	"github.com/drmendoz/backend-gin-gorm/auth"
 	"github.com/drmendoz/backend-gin-gorm/models"
@@ -14,7 +15,7 @@ import (
 
 func GetAdministradores(c *gin.Context) {
 	administradores := []*models.Administrador{}
-	err := models.Db.Find(&administradores).Error
+	err := models.Db.Where("estado = ?", true).Find(&administradores).Error
 	if err != nil {
 		_ = c.Error(err)
 		utils.CrearRespuesta(errors.New("Error al obtener administadores"), nil, c, http.StatusInternalServerError)
@@ -69,9 +70,27 @@ func GetAdministradorPorId(c *gin.Context) {
 	id := c.Param("id")
 	result := models.Db.Where("id = ?", id).Omit("contrasena").First(adm)
 	if result.Error != nil {
+		if errors.Is(result.Error, gorm.ErrRecordNotFound) {
+			utils.CrearRespuesta(errors.New("Administrador no encontrado"), nil, c, http.StatusNotFound)
+			return
+		}
+
 		_ = c.Error(result.Error)
 		utils.CrearRespuesta(errors.New("Error al obtener administrador"), nil, c, http.StatusInternalServerError)
 		return
 	}
+	utils.CrearRespuesta(nil, adm, c, http.StatusOK)
+}
+
+func DeleteAdministrador(c *gin.Context) {
+	id := c.Param("id")
+	adm := &models.Administrador{}
+	result := models.Db.Model(adm).Where("id = ?", id).Update("estado", false)
+	if result.Error != nil || result.RowsAffected == 0 {
+		_ = c.Error(result.Error)
+		utils.CrearRespuesta(errors.New("Error al eliminar administrador"), nil, c, http.StatusInternalServerError)
+		return
+	}
+	_ = models.Db.Omit("contrasena").Where("id = ?", id).First(adm)
 	utils.CrearRespuesta(nil, adm, c, http.StatusOK)
 }

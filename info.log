@@ -5,10 +5,25 @@
  - using code:	gin.SetMode(gin.ReleaseMode)
 
 [GIN-debug] GET    /api/v1/auth/login        --> github.com/drmendoz/backend-gin-gorm/routes.authRoutes.func1 (4 handlers)
-[GIN-debug] GET    /api/v1/administradores   --> github.com/drmendoz/backend-gin-gorm/controllers.GetAdministradores (4 handlers)
-[GIN-debug] POST   /api/v1/administradores   --> github.com/drmendoz/backend-gin-gorm/controllers.CreateAdministrador (4 handlers)
-[GIN-debug] PUT    /api/v1/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateAdministrador (4 handlers)
-[GIN-debug] GET    /api/v1/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.GetAdministradorPorId (4 handlers)
+[GIN-debug] GET    /api/v1/administradores/administradores --> github.com/drmendoz/backend-gin-gorm/controllers.GetAdministradores (4 handlers)
+[GIN-debug] POST   /api/v1/administradores/administradores --> github.com/drmendoz/backend-gin-gorm/controllers.CreateAdministrador (4 handlers)
+[GIN-debug] PUT    /api/v1/administradores/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateAdministrador (4 handlers)
+[GIN-debug] GET    /api/v1/administradores/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.GetAdministradorPorId (4 handlers)
+[GIN-debug] DELETE /api/v1/administradores/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.DeleteAdministrador (4 handlers)
+[GIN-debug] GET    /api/v1/administradores/categorias --> github.com/drmendoz/backend-gin-gorm/controllers.GetCategorias (4 handlers)
+[GIN-debug] POST   /api/v1/administradores/categorias --> github.com/drmendoz/backend-gin-gorm/controllers.CreateCategoria (4 handlers)
+[GIN-debug] GET    /api/v1/administradores/categorias/:id --> github.com/drmendoz/backend-gin-gorm/controllers.GetCategoriaPorId (4 handlers)
+[GIN-debug] DELETE /api/v1/administradores/categorias/:id --> github.com/drmendoz/backend-gin-gorm/controllers.DeleteCategoria (4 handlers)
+[GIN-debug] PUT    /api/v1/administradores/categorias/:id --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateCategoria (4 handlers)
+[GIN-debug] GET    /api/v1/administradores/afiliados --> github.com/drmendoz/backend-gin-gorm/controllers.GetAfiliados (4 handlers)
+[GIN-debug] POST   /api/v1/administradores/afiliados --> github.com/drmendoz/backend-gin-gorm/controllers.CreateAfiliados (4 handlers)
+[GIN-debug] GET    /api/v1/administradores/afiliados/:id --> github.com/drmendoz/backend-gin-gorm/controllers.GetAfiliadoPorId (4 handlers)
+[GIN-debug] DELETE /api/v1/administradores/afiliados/:id --> github.com/drmendoz/backend-gin-gorm/controllers.DeleteAfiliado (4 handlers)
+[GIN-debug] PUT    /api/v1/administradores/afiliados/:id --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateAfiliado (4 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
-::1 - [Sun, 24 Jan 2021 04:09:35 -05] "GET /api/v1/administradores/2 HTTP/1.1 200 924.313µs "PostmanRuntime/7.26.8" "
-[GIN] 2021/01/24 - 04:09:35 | 200 |   16.841118ms |             ::1 | GET      "/api/v1/administradores/2"
+::1 - [Mon, 25 Jan 2021 22:07:15 -05] "GET /api/v1/administradores/afiliados HTTP/1.1 200 947.544µs "PostmanRuntime/7.26.8" "
+[GIN] 2021/01/25 - 22:07:15 | 200 |    9.154707ms |             ::1 | GET      "/api/v1/administradores/afiliados"
+::1 - [Mon, 25 Jan 2021 22:07:24 -05] "POST /api/v1/administradores/afiliados HTTP/1.1 201 2.616648ms "PostmanRuntime/7.26.8" "
+[GIN] 2021/01/25 - 22:07:24 | 201 |    2.739197ms |             ::1 | POST     "/api/v1/administradores/afiliados"
+::1 - [Mon, 25 Jan 2021 22:07:32 -05] "GET /api/v1/administradores/afiliados HTTP/1.1 200 876.441µs "PostmanRuntime/7.26.8" "
+[GIN] 2021/01/25 - 22:07:32 | 200 |   14.140448ms |             ::1 | GET      "/api/v1/administradores/afiliados"
