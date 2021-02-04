@@ -3,8 +3,10 @@ package middlewares
 import (
 	"errors"
 	"net/http"
+	"time"
 
 	"github.com/dgrijalva/jwt-go"
+	"github.com/drmendoz/backend-gin-gorm/models"
 	"github.com/drmendoz/backend-gin-gorm/utils"
 	"github.com/gin-gonic/gin"
 )
@@ -23,6 +25,21 @@ type Claims struct {
 	Rol string
 	Id  int
 	jwt.StandardClaims
+}
+
+func GenerarToken(cliente models.Cliente) string {
+	expirationTime := time.Now().Add(200 * time.Minute)
+	claims := &Claims{
+		Rol: "cliente",
+		Id:  int(cliente.ID),
+		StandardClaims: jwt.StandardClaims{
+			ExpiresAt: expirationTime.Unix(),
+		},
+	}
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+
+	tokenString, _ := token.SignedString(jwtKey)
+	return tokenString
 }
 
 func AuthMiddleWare() gin.HandlerFunc {

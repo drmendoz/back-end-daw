@@ -13,5 +13,7 @@ func init() {
 	router := R.Group("/api/v1")
 	authRoutes(router)
 	administradorRoutes(router)
-
+	productoRoutes(router)
+	clientesRoutes(router)
+	pedidoRoutes(router)
 }

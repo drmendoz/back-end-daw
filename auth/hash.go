@@ -5,6 +5,11 @@ import (
 	"fmt"
 )
 
+type Login struct {
+	Usuario    string `json:"correo"`
+	Contrasena string `json:"contrasena"`
+}
+
 func HashPassword(password string) string {
 	h := sha256.New()
 	_, _ = h.Write([]byte(password))

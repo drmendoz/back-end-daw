@@ -15,7 +15,7 @@ import (
 
 func GetAdministradores(c *gin.Context) {
 	administradores := []*models.Administrador{}
-	err := models.Db.Where("estado = ?", true).Find(&administradores).Error
+	err := models.Db.Omit("usuarios.contrasena").Where("administradores.estado = ?", true).Joins("Usuario").Find(&administradores).Error
 	if err != nil {
 		_ = c.Error(err)
 		utils.CrearRespuesta(errors.New("Error al obtener administadores"), nil, c, http.StatusInternalServerError)
@@ -31,8 +31,8 @@ func CreateAdministrador(c *gin.Context) {
 		utils.CrearRespuesta(err, nil, c, http.StatusBadRequest)
 		return
 	}
-	clave := auth.HashPassword(adm.Contrasena)
-	adm.Contrasena = clave
+	clave := auth.HashPassword(adm.Usuario.Contrasena)
+	adm.Usuario.Contrasena = clave
 	result := models.Db.Create(adm)
 	if result.Error != nil {
 		_ = c.Error(err)
@@ -54,7 +54,7 @@ func UpdateAdministrador(c *gin.Context) {
 	}
 	ui, _ := strconv.ParseUint(c.Param("id"), 10, 64)
 	adm.ID = uint(ui)
-	adm.Contrasena = auth.HashPassword(adm.Contrasena)
+	adm.Usuario.Contrasena = auth.HashPassword(adm.Usuario.Contrasena)
 	result := models.Db.Updates(adm)
 	if result.Error != nil {
 		_ = c.Error(err)
@@ -68,7 +68,7 @@ func UpdateAdministrador(c *gin.Context) {
 func GetAdministradorPorId(c *gin.Context) {
 	adm := &models.Administrador{}
 	id := c.Param("id")
-	result := models.Db.Where("id = ?", id).Omit("contrasena").First(adm)
+	result := models.Db.Where("administradores.id = ?", id).Omit("usuarios.contrasena").Joins("Usuario").First(adm)
 	if result.Error != nil {
 		if errors.Is(result.Error, gorm.ErrRecordNotFound) {
 			utils.CrearRespuesta(errors.New("Administrador no encontrado"), nil, c, http.StatusNotFound)
