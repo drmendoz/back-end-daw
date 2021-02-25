@@ -4,29 +4,225 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
-[GIN-debug] POST   /api/v1/auth/login        --> github.com/drmendoz/backend-gin-gorm/controllers.LoginCliente (4 handlers)
-[GIN-debug] GET    /api/v1/administradores   --> github.com/drmendoz/backend-gin-gorm/controllers.GetAdministradores (4 handlers)
-[GIN-debug] POST   /api/v1/administradores   --> github.com/drmendoz/backend-gin-gorm/controllers.CreateAdministrador (4 handlers)
-[GIN-debug] PUT    /api/v1/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateAdministrador (4 handlers)
-[GIN-debug] GET    /api/v1/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.GetAdministradorPorId (4 handlers)
-[GIN-debug] DELETE /api/v1/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.DeleteAdministrador (4 handlers)
-[GIN-debug] GET    /api/v1/productos         --> github.com/drmendoz/backend-gin-gorm/controllers.GetProductos (4 handlers)
-[GIN-debug] POST   /api/v1/productos         --> github.com/drmendoz/backend-gin-gorm/controllers.CreateProducto (4 handlers)
-[GIN-debug] PUT    /api/v1/productos/:id     --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateProducto (4 handlers)
-[GIN-debug] GET    /api/v1/productos/:id     --> github.com/drmendoz/backend-gin-gorm/controllers.GetProductoPorId (4 handlers)
-[GIN-debug] DELETE /api/v1/productos/:id     --> github.com/drmendoz/backend-gin-gorm/controllers.DeleteProdcuto (4 handlers)
-[GIN-debug] GET    /api/v1/clientes          --> github.com/drmendoz/backend-gin-gorm/controllers.GetCliente (4 handlers)
-[GIN-debug] POST   /api/v1/clientes          --> github.com/drmendoz/backend-gin-gorm/controllers.CreateCliente (4 handlers)
-[GIN-debug] PUT    /api/v1/clientes/:id      --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateCliente (4 handlers)
-[GIN-debug] GET    /api/v1/clientes/:id      --> github.com/drmendoz/backend-gin-gorm/controllers.GetClientePorId (4 handlers)
-[GIN-debug] DELETE /api/v1/clientes/:id      --> github.com/drmendoz/backend-gin-gorm/controllers.DeleteCliente (4 handlers)
-[GIN-debug] GET    /api/v1/pedidos           --> github.com/drmendoz/backend-gin-gorm/controllers.GetPedidos (4 handlers)
-[GIN-debug] POST   /api/v1/pedidos           --> github.com/drmendoz/backend-gin-gorm/controllers.CreatePedido (4 handlers)
-[GIN-debug] PUT    /api/v1/pedidos/:id       --> github.com/drmendoz/backend-gin-gorm/controllers.UpdatePedido (4 handlers)
-[GIN-debug] GET    /api/v1/pedidos/:id       --> github.com/drmendoz/backend-gin-gorm/controllers.GetPedidoPorId (4 handlers)
-[GIN-debug] DELETE /api/v1/pedidos/:id       --> github.com/drmendoz/backend-gin-gorm/controllers.DeletePedido (4 handlers)
+[GIN-debug] GET    /api/v1/resenasAdmin      --> github.com/drmendoz/backend-gin-gorm/controllers.GetResenasAdmin (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/drmendoz/backend-gin-gorm/controllers.LoginCliente (5 handlers)
+[GIN-debug] GET    /api/v1/administradores   --> github.com/drmendoz/backend-gin-gorm/controllers.GetAdministradores (5 handlers)
+[GIN-debug] POST   /api/v1/administradores   --> github.com/drmendoz/backend-gin-gorm/controllers.CreateAdministrador (5 handlers)
+[GIN-debug] PUT    /api/v1/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateAdministrador (5 handlers)
+[GIN-debug] GET    /api/v1/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.GetAdministradorPorId (5 handlers)
+[GIN-debug] DELETE /api/v1/administradores/:id --> github.com/drmendoz/backend-gin-gorm/controllers.DeleteAdministrador (5 handlers)
+[GIN-debug] GET    /api/v1/productos         --> github.com/drmendoz/backend-gin-gorm/controllers.GetProductos (5 handlers)
+[GIN-debug] POST   /api/v1/productos         --> github.com/drmendoz/backend-gin-gorm/controllers.CreateProducto (5 handlers)
+[GIN-debug] PUT    /api/v1/productos/:id     --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateProducto (5 handlers)
+[GIN-debug] GET    /api/v1/productos/:id     --> github.com/drmendoz/backend-gin-gorm/controllers.GetProductoPorId (5 handlers)
+[GIN-debug] DELETE /api/v1/productos/:id     --> github.com/drmendoz/backend-gin-gorm/controllers.DeleteProdcuto (5 handlers)
+[GIN-debug] GET    /api/v1/clientes          --> github.com/drmendoz/backend-gin-gorm/controllers.GetCliente (5 handlers)
+[GIN-debug] POST   /api/v1/clientes          --> github.com/drmendoz/backend-gin-gorm/controllers.CreateCliente (5 handlers)
+[GIN-debug] PUT    /api/v1/clientes/:id      --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateCliente (5 handlers)
+[GIN-debug] GET    /api/v1/clientes/:id      --> github.com/drmendoz/backend-gin-gorm/controllers.GetClientePorId (5 handlers)
+[GIN-debug] DELETE /api/v1/clientes/:id      --> github.com/drmendoz/backend-gin-gorm/controllers.DeleteCliente (5 handlers)
+[GIN-debug] GET    /api/v1/pedidos           --> github.com/drmendoz/backend-gin-gorm/controllers.GetPedidos (5 handlers)
+[GIN-debug] POST   /api/v1/pedidos           --> github.com/drmendoz/backend-gin-gorm/controllers.CreatePedido (5 handlers)
+[GIN-debug] PUT    /api/v1/pedidos/:id       --> github.com/drmendoz/backend-gin-gorm/controllers.UpdatePedido (5 handlers)
+[GIN-debug] GET    /api/v1/pedidos/:id       --> github.com/drmendoz/backend-gin-gorm/controllers.GetPedidoPorId (5 handlers)
+[GIN-debug] DELETE /api/v1/pedidos/:id       --> github.com/drmendoz/backend-gin-gorm/controllers.DeletePedido (5 handlers)
+[GIN-debug] GET    /api/v1/resenas           --> github.com/drmendoz/backend-gin-gorm/controllers.GetResenas (6 handlers)
+[GIN-debug] POST   /api/v1/resenas           --> github.com/drmendoz/backend-gin-gorm/controllers.CreateResena (6 handlers)
+[GIN-debug] PUT    /api/v1/resenas/:id       --> github.com/drmendoz/backend-gin-gorm/controllers.UpdateResena (6 handlers)
+[GIN-debug] GET    /api/v1/resenas/:id       --> github.com/drmendoz/backend-gin-gorm/controllers.GetResenaPorId (6 handlers)
+[GIN-debug] DELETE /api/v1/resenas/:id       --> github.com/drmendoz/backend-gin-gorm/controllers.DeleteResena (6 handlers)
+[GIN-debug] POST   /api/v1/contactenos       --> github.com/drmendoz/backend-gin-gorm/controllers.HandleContactenos (5 handlers)
+[GIN-debug] GET    /api/v1/graficos/ciudades --> github.com/drmendoz/backend-gin-gorm/controllers.GetCiudadesGrafico (5 handlers)
+[GIN-debug] GET    /api/v1/graficos/productos --> github.com/drmendoz/backend-gin-gorm/controllers.GetProductosGrafico (5 handlers)
+[GIN-debug] GET    /api/v1/graficos/clientes --> github.com/drmendoz/backend-gin-gorm/controllers.GetClientesGrafico (5 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
-::1 - [Wed, 03 Feb 2021 20:26:53 -05] "POST /api/v1/auth/login HTTP/1.1 200 930.643µs "PostmanRuntime/7.26.10" "
-[GIN] 2021/02/03 - 20:26:53 | 200 |     955.497µs |             ::1 | POST     "/api/v1/auth/login"
-::1 - [Wed, 03 Feb 2021 20:26:57 -05] "POST /api/v1/auth/login HTTP/1.1 401 930.575µs "PostmanRuntime/7.26.10" "
-[GIN] 2021/02/03 - 20:26:57 | 401 |     955.112µs |             ::1 | POST     "/api/v1/auth/login"
+[GIN] 2021/02/04 - 11:51:59 | 204 |      74.676µs |  192.168.100.97 | OPTIONS  "/api/v1/contactenos"
+192.168.100.97 - [Thu, 04 Feb 2021 11:52:01 -05] "POST /api/v1/contactenos HTTP/1.1 200 2.346634329s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 11:52:01 | 200 |  2.346743416s |  192.168.100.97 | POST     "/api/v1/contactenos"
+[GIN] 2021/02/04 - 11:53:04 | 204 |      12.325µs |  192.168.100.97 | OPTIONS  "/api/v1/contactenos"
+192.168.100.97 - [Thu, 04 Feb 2021 11:53:06 -05] "POST /api/v1/contactenos HTTP/1.1 200 1.839194328s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 11:53:06 | 200 |  1.839335374s |  192.168.100.97 | POST     "/api/v1/contactenos"
+[GIN] 2021/02/04 - 11:56:12 | 204 |       9.324µs |  192.168.100.97 | OPTIONS  "/api/v1/auth/login"
+192.168.100.97 - [Thu, 04 Feb 2021 11:56:12 -05] "POST /api/v1/auth/login HTTP/1.1 200 1.394022ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 11:56:12 | 200 |    1.455345ms |  192.168.100.97 | POST     "/api/v1/auth/login"
+[GIN] 2021/02/04 - 11:58:40 | 204 |      13.946µs |  192.168.100.97 | OPTIONS  "/api/v1/auth/login"
+192.168.100.97 - [Thu, 04 Feb 2021 11:58:40 -05] "POST /api/v1/auth/login HTTP/1.1 200 1.399436ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 11:58:40 | 200 |    1.469131ms |  192.168.100.97 | POST     "/api/v1/auth/login"
+[GIN] 2021/02/04 - 11:59:00 | 204 |      10.774µs |  192.168.100.97 | OPTIONS  "/api/v1/auth/login"
+192.168.100.97 - [Thu, 04 Feb 2021 11:59:00 -05] "POST /api/v1/auth/login HTTP/1.1 200 1.505933ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 11:59:00 | 200 |    1.594854ms |  192.168.100.97 | POST     "/api/v1/auth/login"
+[GIN] 2021/02/04 - 11:59:04 | 204 |      12.533µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 11:59:04 -05] "GET /api/v1/resenas HTTP/1.1 200 1.761671ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 11:59:04 | 200 |    1.860998ms |  192.168.100.97 | GET      "/api/v1/resenas"
+[GIN] 2021/02/04 - 11:59:32 | 204 |      12.628µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 11:59:32 -05] "GET /api/v1/resenas HTTP/1.1 200 1.223933ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 11:59:32 | 200 |    1.288569ms |  192.168.100.97 | GET      "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:00:14 | 204 |       41.31µs |  192.168.100.97 | OPTIONS  "/api/v1/auth/login"
+192.168.100.97 - [Thu, 04 Feb 2021 12:00:14 -05] "POST /api/v1/auth/login HTTP/1.1 200 878.401µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:00:14 | 200 |     941.904µs |  192.168.100.97 | POST     "/api/v1/auth/login"
+::1 - [Thu, 04 Feb 2021 12:01:23 -05] "GET /api/v1/productos HTTP/1.1 200 860.571µs "PostmanRuntime/7.26.8" "
+[GIN] 2021/02/04 - 12:01:23 | 200 |   24.594273ms |             ::1 | GET      "/api/v1/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:08:42 -05] "GET /api/v1/graficos/clientes HTTP/1.1 200 51.129µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:08:42 | 200 |     121.248µs |  192.168.100.97 | GET      "/api/v1/graficos/clientes"
+192.168.100.97 - [Thu, 04 Feb 2021 12:08:42 -05] "GET /api/v1/graficos/ciudades HTTP/1.1 200 586.852µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:08:42 | 200 |      656.73µs |  192.168.100.97 | GET      "/api/v1/graficos/ciudades"
+192.168.100.97 - [Thu, 04 Feb 2021 12:08:42 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 560.892µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:08:42 | 200 |     590.621µs |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:08:42 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 720.441µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:08:42 | 200 |     777.319µs |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:08:42 -05] "GET /api/v1/resenasAdmin?ciudad= HTTP/1.1 200 3.026931ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:08:42 | 200 |    3.083543ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad="
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:04 -05] "GET /api/v1/graficos/clientes HTTP/1.1 200 22.695µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:04 | 200 |     118.857µs |  192.168.100.97 | GET      "/api/v1/graficos/clientes"
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:04 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 966.123µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:04 | 200 |    1.034595ms |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:04 -05] "GET /api/v1/graficos/ciudades HTTP/1.1 200 2.642926ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:04 | 200 |    2.690606ms |  192.168.100.97 | GET      "/api/v1/graficos/ciudades"
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:04 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 458.372µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:04 | 200 |     489.995µs |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:04 -05] "GET /api/v1/resenasAdmin?ciudad= HTTP/1.1 200 2.651605ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:04 | 200 |    2.708451ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad="
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:12 -05] "GET /api/v1/graficos/clientes HTTP/1.1 200 25.284µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:12 | 200 |     165.611µs |  192.168.100.97 | GET      "/api/v1/graficos/clientes"
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:12 -05] "GET /api/v1/graficos/ciudades HTTP/1.1 200 791.211µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:12 | 200 |     870.679µs |  192.168.100.97 | GET      "/api/v1/graficos/ciudades"
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:12 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 964.15µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:12 | 200 |    1.074147ms |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:12 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 1.063102ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:12 | 200 |    1.144728ms |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:12 -05] "GET /api/v1/resenasAdmin?ciudad= HTTP/1.1 200 3.172828ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:12 | 200 |    3.252403ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad="
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:19 -05] "GET /api/v1/resenasAdmin?ciudad=Pasaje HTTP/1.1 200 978.412µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:19 | 200 |    1.259369ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad=Pasaje"
+192.168.100.97 - [Thu, 04 Feb 2021 12:09:21 -05] "GET /api/v1/resenasAdmin?ciudad=Manta HTTP/1.1 200 1.629231ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:09:21 | 200 |    1.675692ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad=Manta"
+[GIN] 2021/02/04 - 12:10:19 | 204 |       9.105µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:19 -05] "GET /api/v1/resenas HTTP/1.1 200 603.698µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:19 | 200 |     636.038µs |  192.168.100.97 | GET      "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:10:29 | 204 |      12.573µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:29 -05] "POST /api/v1/resenas HTTP/1.1 201 5.021166ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:29 | 201 |    5.111341ms |  192.168.100.97 | POST     "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:10:29 | 204 |      13.494µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:29 -05] "GET /api/v1/resenas HTTP/1.1 200 1.493812ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:29 | 200 |    1.589413ms |  192.168.100.97 | GET      "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:10:36 | 204 |      12.827µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:36 -05] "POST /api/v1/resenas HTTP/1.1 201 2.550587ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:36 | 201 |    2.639641ms |  192.168.100.97 | POST     "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:10:36 | 204 |      12.588µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:36 -05] "GET /api/v1/resenas HTTP/1.1 200 1.532437ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:36 | 200 |    1.623594ms |  192.168.100.97 | GET      "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:10:37 | 204 |      12.676µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas/1"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:37 -05] "DELETE /api/v1/resenas/1 HTTP/1.1 200 4.281712ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:37 | 200 |     4.36326ms |  192.168.100.97 | DELETE   "/api/v1/resenas/1"
+[GIN] 2021/02/04 - 12:10:37 | 204 |      12.893µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:37 -05] "GET /api/v1/resenas HTTP/1.1 200 1.36997ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:37 | 200 |    1.427485ms |  192.168.100.97 | GET      "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:10:43 | 204 |      12.583µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:43 -05] "POST /api/v1/resenas HTTP/1.1 201 3.375063ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:43 | 201 |    3.460244ms |  192.168.100.97 | POST     "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:10:43 | 204 |      12.358µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:43 -05] "GET /api/v1/resenas HTTP/1.1 200 1.509468ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:43 | 200 |    1.601148ms |  192.168.100.97 | GET      "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:57 -05] "GET /api/v1/graficos/clientes HTTP/1.1 200 23.119µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:57 | 200 |     123.238µs |  192.168.100.97 | GET      "/api/v1/graficos/clientes"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:57 -05] "GET /api/v1/graficos/ciudades HTTP/1.1 200 900.201µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:57 | 200 |      984.34µs |  192.168.100.97 | GET      "/api/v1/graficos/ciudades"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:57 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 751.008µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:57 | 200 |     792.048µs |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:57 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 891.019µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:57 | 200 |     985.393µs |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:57 -05] "GET /api/v1/resenasAdmin?ciudad= HTTP/1.1 200 3.328926ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:57 | 200 |    3.418638ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad="
+192.168.100.97 - [Thu, 04 Feb 2021 12:10:59 -05] "GET /api/v1/resenasAdmin?ciudad=Guayaquil HTTP/1.1 200 3.108656ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:10:59 | 200 |    3.201695ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad=Guayaquil"
+192.168.100.97 - [Thu, 04 Feb 2021 12:11:02 -05] "GET /api/v1/resenasAdmin?ciudad=Manta HTTP/1.1 200 2.620821ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:11:02 | 200 |    2.687132ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad=Manta"
+192.168.100.97 - [Thu, 04 Feb 2021 12:11:04 -05] "GET /api/v1/resenasAdmin?ciudad=Quito HTTP/1.1 200 3.292753ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:11:04 | 200 |    3.383739ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad=Quito"
+192.168.100.97 - [Thu, 04 Feb 2021 12:11:08 -05] "GET /api/v1/resenasAdmin?ciudad= HTTP/1.1 200 3.244017ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:11:08 | 200 |    3.389062ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad="
+192.168.100.97 - [Thu, 04 Feb 2021 12:14:45 -05] "GET /api/v1/graficos/ciudades HTTP/1.1 200 921.547µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:14:45 | 200 |    1.013803ms |  192.168.100.97 | GET      "/api/v1/graficos/ciudades"
+192.168.100.97 - [Thu, 04 Feb 2021 12:14:45 -05] "GET /api/v1/graficos/clientes HTTP/1.1 200 11.87µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:14:45 | 200 |      49.707µs |  192.168.100.97 | GET      "/api/v1/graficos/clientes"
+192.168.100.97 - [Thu, 04 Feb 2021 12:14:45 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 1.062126ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:14:45 | 200 |    1.118103ms |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:14:45 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 513.041µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:14:45 | 200 |     581.796µs |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:14:45 -05] "GET /api/v1/resenasAdmin?ciudad= HTTP/1.1 200 1.879078ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:14:45 | 200 |     1.94609ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad="
+192.168.100.97 - [Thu, 04 Feb 2021 12:15:38 -05] "GET /api/v1/graficos/clientes HTTP/1.1 200 22.988µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:15:38 | 200 |     140.553µs |  192.168.100.97 | GET      "/api/v1/graficos/clientes"
+192.168.100.97 - [Thu, 04 Feb 2021 12:15:38 -05] "GET /api/v1/graficos/ciudades HTTP/1.1 200 803.654µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:15:38 | 200 |     852.506µs |  192.168.100.97 | GET      "/api/v1/graficos/ciudades"
+192.168.100.97 - [Thu, 04 Feb 2021 12:15:38 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 888.751µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:15:38 | 200 |     924.608µs |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:15:38 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 461.366µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:15:38 | 200 |     507.013µs |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:15:38 -05] "GET /api/v1/resenasAdmin?ciudad= HTTP/1.1 200 3.209416ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:15:38 | 200 |    3.302081ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad="
+[GIN] 2021/02/04 - 12:17:35 | 204 |      13.682µs |  192.168.100.97 | OPTIONS  "/api/v1/auth/login"
+192.168.100.97 - [Thu, 04 Feb 2021 12:17:35 -05] "POST /api/v1/auth/login HTTP/1.1 200 1.535118ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:17:35 | 200 |    1.630546ms |  192.168.100.97 | POST     "/api/v1/auth/login"
+[GIN] 2021/02/04 - 12:17:38 | 204 |      13.483µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:17:38 -05] "GET /api/v1/resenas HTTP/1.1 200 1.383405ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:17:38 | 200 |    1.446682ms |  192.168.100.97 | GET      "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:18:40 -05] "GET /api/v1/clientes HTTP/1.1 200 977.571µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:18:40 | 200 |    1.058379ms |  192.168.100.97 | GET      "/api/v1/clientes"
+192.168.100.97 - [Thu, 04 Feb 2021 12:18:40 -05] "GET /favicon.ico HTTP/1.1 404 506ns "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:18:40 | 404 |     114.225µs |  192.168.100.97 | GET      "/favicon.ico"
+[GIN] 2021/02/04 - 12:33:24 | 204 |      24.012µs |  192.168.100.97 | OPTIONS  "/api/v1/auth/login"
+192.168.100.97 - [Thu, 04 Feb 2021 12:33:24 -05] "POST /api/v1/auth/login HTTP/1.1 200 792.434µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:33:24 | 200 |     841.059µs |  192.168.100.97 | POST     "/api/v1/auth/login"
+[GIN] 2021/02/04 - 12:33:37 | 204 |      10.358µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:33:37 -05] "GET /api/v1/resenas HTTP/1.1 200 1.476897ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:33:37 | 200 |    1.535964ms |  192.168.100.97 | GET      "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:34:20 | 204 |      19.314µs |  192.168.100.97 | OPTIONS  "/api/v1/auth/login"
+192.168.100.97 - [Thu, 04 Feb 2021 12:34:20 -05] "POST /api/v1/auth/login HTTP/1.1 200 1.124093ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:34:20 | 200 |    1.190779ms |  192.168.100.97 | POST     "/api/v1/auth/login"
+[GIN] 2021/02/04 - 12:34:22 | 204 |      13.777µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:34:22 -05] "GET /api/v1/resenas HTTP/1.1 200 1.051773ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:34:22 | 200 |     1.12172ms |  192.168.100.97 | GET      "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:35:44 | 204 |       8.764µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:35:44 -05] "GET /api/v1/resenas HTTP/1.1 200 1.507852ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:35:44 | 200 |    1.628337ms |  192.168.100.97 | GET      "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:36:47 | 204 |      14.009µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:36:47 -05] "POST /api/v1/resenas HTTP/1.1 201 3.708255ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:36:47 | 201 |    3.764025ms |  192.168.100.97 | POST     "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:36:47 | 204 |       7.335µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:36:47 -05] "GET /api/v1/resenas HTTP/1.1 200 699.678µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:36:47 | 200 |     749.391µs |  192.168.100.97 | GET      "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:36:55 | 204 |      13.534µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas/6"
+192.168.100.97 - [Thu, 04 Feb 2021 12:36:55 -05] "DELETE /api/v1/resenas/6 HTTP/1.1 200 3.068636ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:36:55 | 200 |    3.162425ms |  192.168.100.97 | DELETE   "/api/v1/resenas/6"
+[GIN] 2021/02/04 - 12:36:55 | 204 |       6.519µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:36:55 -05] "GET /api/v1/resenas HTTP/1.1 200 857.878µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:36:55 | 200 |     893.625µs |  192.168.100.97 | GET      "/api/v1/resenas"
+[GIN] 2021/02/04 - 12:37:01 | 204 |       7.043µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas/5"
+192.168.100.97 - [Thu, 04 Feb 2021 12:37:01 -05] "PUT /api/v1/resenas/5 HTTP/1.1 200 1.459969ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:37:01 | 200 |    1.487172ms |  192.168.100.97 | PUT      "/api/v1/resenas/5"
+[GIN] 2021/02/04 - 12:37:01 | 204 |       6.095µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:37:01 -05] "GET /api/v1/resenas HTTP/1.1 200 693.253µs "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:37:01 | 200 |     721.188µs |  192.168.100.97 | GET      "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:42:44 -05] "GET /api/v1/graficos/ciudades HTTP/1.1 200 407.027µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:42:44 | 200 |     469.212µs |  192.168.100.97 | GET      "/api/v1/graficos/ciudades"
+192.168.100.97 - [Thu, 04 Feb 2021 12:42:44 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 359.019µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:42:44 | 200 |     391.092µs |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:42:44 -05] "GET /api/v1/graficos/clientes HTTP/1.1 200 26.775µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:42:44 | 200 |       66.36µs |  192.168.100.97 | GET      "/api/v1/graficos/clientes"
+192.168.100.97 - [Thu, 04 Feb 2021 12:42:44 -05] "GET /api/v1/graficos/productos HTTP/1.1 200 360.039µs "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:42:44 | 200 |     388.554µs |  192.168.100.97 | GET      "/api/v1/graficos/productos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:42:44 -05] "GET /api/v1/resenasAdmin?ciudad= HTTP/1.1 200 1.651609ms "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36" "
+[GIN] 2021/02/04 - 12:42:44 | 200 |    1.704138ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad="
+[GIN] 2021/02/04 - 12:48:01 | 204 |      21.373µs |  192.168.100.97 | OPTIONS  "/api/v1/contactenos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:48:04 -05] "POST /api/v1/contactenos HTTP/1.1 200 2.964176589s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:48:04 | 200 |  2.964243852s |  192.168.100.97 | POST     "/api/v1/contactenos"
+192.168.100.97 - [Thu, 04 Feb 2021 12:49:15 -05] "GET /api/v1/resenasAdmin?ciudad=Manta HTTP/1.1 200 2.152944ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:49:15 | 200 |     2.22197ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad=Manta"
+192.168.100.97 - [Thu, 04 Feb 2021 12:49:25 -05] "GET /api/v1/resenasAdmin?ciudad=Guayaquil HTTP/1.1 200 1.8043ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:49:25 | 200 |     1.88723ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad=Guayaquil"
+192.168.100.97 - [Thu, 04 Feb 2021 12:49:27 -05] "GET /api/v1/resenasAdmin?ciudad= HTTP/1.1 200 2.279022ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:49:27 | 200 |    2.325607ms |  192.168.100.97 | GET      "/api/v1/resenasAdmin?ciudad="
+[GIN] 2021/02/04 - 12:55:51 | 204 |      45.449µs |  192.168.100.97 | OPTIONS  "/api/v1/resenas"
+192.168.100.97 - [Thu, 04 Feb 2021 12:55:51 -05] "GET /api/v1/resenas HTTP/1.1 200 1.574552ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" "
+[GIN] 2021/02/04 - 12:55:51 | 200 |    1.685686ms |  192.168.100.97 | GET      "/api/v1/resenas"

@@ -7,6 +7,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
 
 	"github.com/drmendoz/backend-gin-gorm/models"
 	"github.com/drmendoz/backend-gin-gorm/utils"
@@ -14,7 +15,7 @@ import (
 
 func GetPedidos(c *gin.Context) {
 	pedidos := []*models.Pedido{}
-	err := models.Db.Where("pedidos.estado = ?", true).Joins("Cliente").Joins("DetallesPedidos").Find(&pedidos).Error
+	err := models.Db.Where("pedidos.estado = ?", true).Preload("Cliente.Usuario").Preload("DetallePedidos.Producto").Preload(clause.Associations).Find(&pedidos).Error
 	if err != nil {
 		_ = c.Error(err)
 		utils.CrearRespuesta(errors.New("Error al obtener pedidos"), nil, c, http.StatusInternalServerError)

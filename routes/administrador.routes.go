@@ -8,7 +8,6 @@ import (
 func administradorRoutes(r *gin.RouterGroup) {
 	admin := r.Group("administradores")
 	//adm.Use(middlewares.AuthMiddleWare())
-
 	admin.GET("", controllers.GetAdministradores)
 	admin.POST("", controllers.CreateAdministrador)
 	admin.PUT("/:id", controllers.UpdateAdministrador)

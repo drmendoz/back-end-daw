@@ -14,3 +14,8 @@ func (Cliente) TableName() string {
 
 	return "clientes"
 }
+
+type ClienteLog struct {
+	Cliente Cliente `json:"respuesta"`
+	Token   string  `json:"token"`
+}

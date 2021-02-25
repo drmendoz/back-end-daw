@@ -121,9 +121,10 @@ func LoginCliente(c *gin.Context) {
 		utils.CrearRespuesta(nil, "Error al validar credenciales", c, http.StatusUnauthorized)
 		return
 	}
-	token := middlewares.GenerarToken(*cliente)
-	c.Header("token", token)
+	clienteLog := models.ClienteLog{}
+	clienteLog.Token = middlewares.GenerarToken(*cliente)
+	clienteLog.Cliente = *cliente
 	cliente.Usuario.Contrasena = ""
-	utils.CrearRespuesta(err, cliente, c, http.StatusOK)
+	utils.CrearRespuesta(err, clienteLog, c, http.StatusOK)
 
 }
